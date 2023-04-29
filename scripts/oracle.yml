@@ -1,0 +1,14 @@
+windows:
+  - name: oracle
+    root: ./
+    layout: main-vertical
+    panes:
+      - commands:
+        - sleep 1
+        - ganache-cli -a 3 -d -m "apple balloon zebra sword lamp tiger bottle piano rainbow crab hammer star"
+      - commands:
+        - cd ./on-chain-oracle
+        - cp .env.example .env
+        - yarn install
+        - truffle compile
+        - truffle migrate
